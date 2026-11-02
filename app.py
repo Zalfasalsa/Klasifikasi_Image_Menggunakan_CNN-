@@ -20,7 +20,8 @@ st.set_page_config(
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-OUT_DIR = os.path.join(BASE_DIR, "output")
+BASE_DIR = Path(__file__).resolve().parent
+OUT_DIR = BASE_DIR
 
 MODEL_PATH = os.path.join(OUT_DIR, "final_oceanic_model.keras")
 BEST_MODEL_PATH = os.path.join(OUT_DIR, "oceanic_best.keras")  # cadangan
